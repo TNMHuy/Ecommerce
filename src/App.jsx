@@ -18,6 +18,7 @@ import UserList from './pages/admin/users/UserList'
 import UserProfile from './pages-sections/admin/users/UserProfile'
 import SearchPage from './pages-sections/admin/products/SearchPage/SearchPage'
 import CartReview from './pages/CartReview'
+import CartDetail from './pages/CartDetail'
 
 
 function App() {
@@ -32,7 +33,8 @@ function App() {
             <Route path='/user/detail' element={<UserProfile />} />  
             <Route path='/search-page' element={<SearchPage />} />  
             <Route path='user' element={<User />} />
-            <Route path='cart' element={<CartReview />} />
+            <Route path='/cart' element={<CartReview />} />
+            <Route path='/cart-detail' element={<CartDetail />} />
           </Route>
           <Route path='/signup' element={<SignUp />} />
           <Route path='/login' element={<LoginPage />} />

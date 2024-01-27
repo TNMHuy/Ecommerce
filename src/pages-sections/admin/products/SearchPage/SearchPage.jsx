@@ -9,6 +9,7 @@ import SearchCate from './body/SearchCate';
 import SearchProducts from './body/SearchProducts';
 import { useDispatch, useSelector } from 'react-redux';
 import { getProduct } from '../../../../apis/product';
+import { SnackbarProvider } from 'notistack';
 
 
 
@@ -41,7 +42,10 @@ const SearchPage = () => {
     <SearchPageHeader />
     <FlexBox display='flex' gap='20px' >
         <SearchCate filter ={filter}/>
-        <SearchProducts products={products} />
+        <SnackbarProvider>
+         <SearchProducts products={products} />
+
+        </SnackbarProvider>
     </FlexBox>
     </Container>
    </>

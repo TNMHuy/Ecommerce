@@ -12,7 +12,9 @@ const Public = ({ topbarBgColor, showTopbar = true }) => {
             <Header />
             <BodyCategories/>
             <Outlet />
+            
             <Footer/>
+            
         </>
     )
 }

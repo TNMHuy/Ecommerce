@@ -46,7 +46,7 @@ export const CartWrapper = styled(Box)(({ theme }) => ({
 const CartReview = () => {
     const product = useSelector((state)=>state.addToCart.items)
     const dispatch = useDispatch()
-    console.log(product);
+    // console.log(product);
     let total = 0 
     const pay = product.map((item,index)=>{
         const sum = item.product.price * item.quantity
@@ -139,7 +139,7 @@ const CartReview = () => {
                 <Box color={'red'}>Note</Box>
             </Box>
            
-            <TextField variant="outlined" fullWidth   />  
+            <TextField variant="outlined" fullWidth  multiline rows={5} />  
                 
          
            <Box mt={'20px'} mb={'20px'}>
@@ -159,8 +159,8 @@ const CartReview = () => {
                     options={state}
             />
             <TextField label='Zip Code'/>
-            <Button variant='outlined'color='error'> Calculate Shipping</Button>
-            <Button variant='contained' color='error'>Checkout Now</Button>
+                <Button variant='outlined'color='error'> Calculate Shipping</Button>
+                <Button variant='contained' color='error'>Checkout Now</Button>
            </Box>
         </Box>
         </Box>

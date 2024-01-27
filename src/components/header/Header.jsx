@@ -64,6 +64,7 @@ const Header = () => {
     }
     let total = 0 
     const pay = product.items.map((item,index)=>{
+        console.log(item);
         const sum = item.product.price * item.quantity
         return total += sum
     })
@@ -207,7 +208,7 @@ const Header = () => {
                         <Box display={'flex'} flexDirection={'column'} gap={'10px'} position={'fixed'} bottom={'20px'}>
                             <Button variant='contained' color='error' >Checkout Now (${total})</Button>
                             <Button variant='outlined'sx={{color:'red',width:'332px'}} onClick={()=>handleClose()}  >
-                                <Link to={'cart'}>
+                                <Link to={'/cart'}>
                                 View Cart
                                 </Link>
                                 </Button>

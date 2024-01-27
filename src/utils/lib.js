@@ -65,4 +65,5 @@ function currency(price, fraction = 2) {
     return formatCurrency.format(price);
 }
 
+
 export { renderProductCount, calculateDiscount, currency, getDateDifference };
