@@ -7,6 +7,7 @@ import ExpandMoreOutlinedIcon from '@mui/icons-material/ExpandMoreOutlined';
 
 import UserAccountNav from './nav-link/UserAccountNav';
 import PagesNav from './nav-link/PagesNav';
+import NavLink from './nav-link/NavLink';
 
 
 
@@ -34,7 +35,7 @@ const BodyCategories = () => {
             
         </FlexBox>
         <Box display={'flex'} gap={3} alignItems={'center'}  >
-
+            <NavLink>About</NavLink>
             <PagesNav/>
            <UserAccountNav/>
             

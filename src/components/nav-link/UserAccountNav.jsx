@@ -45,7 +45,7 @@ const UserAccountNav = () => {
               onClose={handleClose}
             
           >
-              <Link to='/user/detail'>
+              <Link to='/user/profile'>
               <MenuItem onClick={handleClose}>Profile</MenuItem>
               </Link>
             

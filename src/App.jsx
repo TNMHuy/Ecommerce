@@ -19,6 +19,11 @@ import UserProfile from './pages-sections/admin/users/UserProfile'
 import SearchPage from './pages-sections/admin/products/SearchPage/SearchPage'
 import CartReview from './pages/CartReview'
 import CartDetail from './pages/CartDetail'
+import Order from './pages/Order'
+import WishList from './pages/WishList'
+import SupportTickets from './pages/SupportTickets'
+import Addresses from './pages/Addresses'
+import PayMethods from './pages/PayMethods'
 
 
 function App() {
@@ -30,9 +35,16 @@ function App() {
         <Routes>
           <Route path='/' element={<Public topbarBgColor={theme.palette.grey[900]} />}>
             <Route path='' element={<Home />} />
-            <Route path='/user/detail' element={<UserProfile />} />  
+            <Route path='user' element={<User />} >
+              <Route path='/user/profile' element={<UserProfile />} />  
+              <Route path='/user/order' element={<Order />} />  
+              <Route path='/user/wish' element={<WishList />} />  
+              <Route path='/user/support-tickets' element={<SupportTickets />} />  
+              <Route path='/user/addresses' element={<Addresses />} />  
+              <Route path='/user/payment' element={<PayMethods />} />  
+
+            </Route>
             <Route path='/search-page' element={<SearchPage />} />  
-            <Route path='user' element={<User />} />
             <Route path='/cart' element={<CartReview />} />
             <Route path='/cart-detail' element={<CartDetail />} />
           </Route>

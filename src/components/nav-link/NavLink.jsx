@@ -1,14 +1,17 @@
-import { styled } from '@mui/material'
+import { Box, styled } from '@mui/material'
 import clsx from 'clsx'
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
-const StyledLink = styled("div")(({ theme, active_route }) => ({
+const StyledLink = styled(Box)(({ theme, active_route }) => ({
     position: "relative",
     transition: "color 150ms ease-in-out",
     color: active_route === "active" ? theme.palette.primary.main : "inherit",
+    borderLeft:active_route==="active" ? '4px solid red' : '',
+    
     "&:hover": {
         color: `${theme.palette.primary.main} !important`
+        
     }
 }))
 

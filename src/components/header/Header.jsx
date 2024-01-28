@@ -64,7 +64,7 @@ const Header = () => {
     }
     let total = 0 
     const pay = product.items.map((item,index)=>{
-        console.log(item);
+        // console.log(item);
         const sum = item.product.price * item.quantity
         return total += sum
     })

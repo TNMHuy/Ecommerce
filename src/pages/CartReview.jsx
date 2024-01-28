@@ -76,6 +76,7 @@ const CartReview = () => {
         <Box >
            {
             product.map((item,index)=>{
+                console.log(item);
                 const cartSum = item.product.price * item.quantity
                 return <Box mt={'30px'} boxShadow={'5px 5px 10px 0px grey '} borderRadius={'20px'}  key={index}>
                 <CartWrapper display={'flex'} alignItems={'center'}  >

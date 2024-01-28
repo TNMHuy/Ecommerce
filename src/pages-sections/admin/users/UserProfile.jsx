@@ -38,11 +38,9 @@ const UserProfile = () => {
     <Container
           sx={{
             display: 'flex',
-            marginTop:'48px',
             gap:'100px',
         }}
       >
-     <UserDasboard/>
      {
       !isEdit ? 
       <FlexBox display='flex'
