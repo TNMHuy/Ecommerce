@@ -7,6 +7,7 @@ import CartImg from '../assets/cart.png'
 import Image from '../components/Image'
 import { reduceCart, removeCart, setCart } from '../redux/slice/addTocart'
 import CloseIcon from '@mui/icons-material/Close';
+import { Link } from 'react-router-dom'
 const country = [
     { label: 'America',  },
     { label: 'Belgium',  },
@@ -66,12 +67,7 @@ const CartReview = () => {
 
   return (
     <Container>
-        <Box display={'flex'}>
-            <Box>Cart</Box>
-            <Box>Detail</Box>
-            <Box>Payment</Box>
-            <Box>Review</Box>
-        </Box>
+        
         <Box display={'flex'} gap={'40px'} >
         <Box >
            {
@@ -148,20 +144,22 @@ const CartReview = () => {
              <Button fullWidth variant='outlined'color='error'>Apply Voucher</Button>
            </Box>
            <Box display={'flex'} flexDirection={'column'} gap={'20px'}>
-            <Box >Shipping Estimates</Box>
-            <Autocomplete 
-                    renderInput={(params) => <TextField {...params} label="Country"/>}
-                    disablePortal
-                    options={country}
-            />
-            <Autocomplete 
-                    renderInput={(params) => <TextField {...params} label="State"/>}
-                    disablePortal
-                    options={state}
-            />
-            <TextField label='Zip Code'/>
+                <Box >Shipping Estimates</Box>
+                <Autocomplete 
+                        renderInput={(params) => <TextField {...params} label="Country"/>}
+                        disablePortal
+                        options={country}
+                />
+                <Autocomplete 
+                        renderInput={(params) => <TextField {...params} label="State"/>}
+                        disablePortal
+                        options={state}
+                />
+                <TextField label='Zip Code'/>
                 <Button variant='outlined'color='error'> Calculate Shipping</Button>
-                <Button variant='contained' color='error'>Checkout Now</Button>
+                <Link to={'/checkout'}>
+                    <Button variant='contained' sx={{width:'100%'}} color='error'>Checkout Now</Button>
+                </Link>
            </Box>
         </Box>
         </Box>

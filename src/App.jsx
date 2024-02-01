@@ -1,7 +1,6 @@
 import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Public from './layouts/Public'
-import Home from './pages/Home'
 import Admin from './layouts/Admin'
 import { useTheme } from '@mui/material'
 import SignUp from './pages/SignUp'
@@ -18,12 +17,16 @@ import UserList from './pages/admin/users/UserList'
 import UserProfile from './pages-sections/admin/users/UserProfile'
 import SearchPage from './pages-sections/admin/products/SearchPage/SearchPage'
 import CartReview from './pages/CartReview'
-import CartDetail from './pages/CartDetail'
+import CardDetail from './pages/CardDetail'
 import Order from './pages/Order'
 import WishList from './pages/WishList'
 import SupportTickets from './pages/SupportTickets'
 import Addresses from './pages/Addresses'
 import PayMethods from './pages/PayMethods'
+import Home from './pages/home/Home'
+import Description from './pages/Description'
+import Review from './pages/Review'
+import CheckOut from './pages/CheckOut'
 
 
 function App() {
@@ -42,11 +45,15 @@ function App() {
               <Route path='/user/support-tickets' element={<SupportTickets />} />  
               <Route path='/user/addresses' element={<Addresses />} />  
               <Route path='/user/payment' element={<PayMethods />} />  
-
             </Route>
+            <Route path='/checkout' element={<CheckOut />} />  
             <Route path='/search-page' element={<SearchPage />} />  
             <Route path='/cart' element={<CartReview />} />
-            <Route path='/cart-detail' element={<CartDetail />} />
+            <Route path='/card-detail' element={<CardDetail />} >
+              <Route path='/card-detail/description' element={<Description />} />
+              <Route path='/card-detail/review' element={<Review />} />
+              
+            </Route>
           </Route>
           <Route path='/signup' element={<SignUp />} />
           <Route path='/login' element={<LoginPage />} />

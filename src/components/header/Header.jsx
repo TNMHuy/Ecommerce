@@ -206,7 +206,9 @@ const Header = () => {
                     </Box>
                        }
                         <Box display={'flex'} flexDirection={'column'} gap={'10px'} position={'fixed'} bottom={'20px'}>
-                            <Button variant='contained' color='error' >Checkout Now (${total})</Button>
+                            <Link to={'/checkout'}>
+                                <Button variant='contained'sx={{width:'100%'}} color='error' >Checkout Now (${total})</Button>
+                            </Link>
                             <Button variant='outlined'sx={{color:'red',width:'332px'}} onClick={()=>handleClose()}  >
                                 <Link to={'/cart'}>
                                 View Cart

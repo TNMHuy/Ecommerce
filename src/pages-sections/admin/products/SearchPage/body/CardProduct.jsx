@@ -47,7 +47,7 @@ const CardProduct = ({item,index}) => {
     })
   return (
     <BoxWrapper key={index}> 
-            <Link to={'/cart-detail'}>
+            <Link to={'/card-detail'}>
                 <Box width={'290px'}>
                     <Image width={'100%'} src={img}></Image>
                     <Box fontWeight={'600'}>{item.name}</Box> 
